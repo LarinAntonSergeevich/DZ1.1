@@ -10,12 +10,12 @@ import android.widget.TextView
 class MainActivity : AppCompatActivity() {
     fun onClick(view: View)
     {
-        var BigEvilCorporation1 = findViewById<EditText>(R.id.editTextText)
-        var BigEvilCorporation2 = findViewById<EditText>(R.id.editTextText3)
-        var BigEvilCorporation3 = findViewById<EditText>(R.id.editTextText4)
-        var BigEvilCorporation4 = findViewById<EditText>(R.id.editTextText5)
+        var BigEvilCorporation1 = findViewById<EditText>(R.id.edit_Text_name)
+        var BigEvilCorporation2 = findViewById<EditText>(R.id.edit_Text_Rost)
+        var BigEvilCorporation3 = findViewById<EditText>(R.id.edit_Text_Ves)
+        var BigEvilCorporation4 = findViewById<EditText>(R.id.edit_Text_vozrast)
 
-        var outBigEvilCorporation = findViewById<TextView>(R.id.textView7)
+        var outBigEvilCorporation = findViewById<TextView>(R.id.textView_result)
 
         var Evil: Float = 0f
         val name = BigEvilCorporation1.text.toString()
@@ -47,42 +47,42 @@ class MainActivity : AppCompatActivity() {
             value="Вы Огр Онанист?!"
         }
         if(name.contains("Э")){
-            Evil = Evil + 0.1f
+            Evil = Evil + 0.2f
         }
         if(height<=50){
-            Evil = Evil + 0.1f
+            Evil = Evil + 0.2f
         }
         if(weight>=150){
-            Evil = Evil + 0.1f
+            Evil = Evil + 0.2f
         }
         if(age>=25){
-            Evil = Evil + 0.1f
+            Evil = Evil + 0.2f
         }
         else if(age<=2){
-            Evil = Evil + 0.1f
+            Evil = Evil + 0.2f
         }
-        if (Evil >= 0.5f){
+        if (Evil >= 1f){
             value="Вы Эльф Гамосек!"
         }
         else{
             value="Вы Лысый Чмошник?!"
         }
-        if(name.contains("Т")){
-            Evil = Evil + 0.1f
+        if(name.contains("К")){
+            Evil = Evil + 1f
         }
         if(height<=180){
-            Evil = Evil + 0.1f
+            Evil = Evil + 1f
         }
         if(weight>=100){
-            Evil = Evil + 0.1f
+            Evil = Evil + 1f
         }
         if(age>=18){
-            Evil = Evil + 0.1f
+            Evil = Evil + 1f
         }
         else if(age<=18){
-            Evil = Evil + 0.1f
+            Evil = Evil + 1f
         }
-        if (Evil >= 0.5f){
+        if (Evil >= 5f){
             value="Вы Тихон!"
         }
         else{
@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity() {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val mainButton = findViewById<Button>(R.id.button6)
+        val mainButton = findViewById<Button>(R.id.button_Raschet)
 
         mainButton.setOnClickListener { onClick(it) }
 
